@@ -119,8 +119,8 @@ impl Game {
         let mut new_x = rng.gen_range(1..self.width);
         let mut new_y = rng.gen_range(1..self.height);
         while self.snake.overlap_tail(new_x, new_y) {
-            new_x = rng.gen_range(1..self.width);
-            new_y = rng.gen_range(1..self.height);
+            new_x = rng.gen_range(1..self.width - 1);
+            new_y = rng.gen_range(1..self.height - 1);
         }
 
         self.food_x = new_x;
