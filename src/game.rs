@@ -116,11 +116,11 @@ impl Game {
     fn add_food(&mut self) {
         let mut rng = rand::thread_rng();
 
-        let mut new_x = rng.gen_range(1..self.width);
-        let mut new_y = rng.gen_range(1..self.height);
+        let mut new_x = rng.gen_range(1..self.width - 2);
+        let mut new_y = rng.gen_range(1..self.height - 2);
         while self.snake.overlap_tail(new_x, new_y) {
-            new_x = rng.gen_range(1..self.width - 1);
-            new_y = rng.gen_range(1..self.height - 1);
+            new_x = rng.gen_range(1..self.width - 2);
+            new_y = rng.gen_range(1..self.height - 2);
         }
 
         self.food_x = new_x;
