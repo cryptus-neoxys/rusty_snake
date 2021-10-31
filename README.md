@@ -17,7 +17,7 @@ Classic snake game built in Rust using Piston Window.
 **Steps to run**
 1. ```git clone https://github.com/cryptus-neoxys/rusty_snake.git```
 2. ```cd rusty_snake```
-3. ```cagro build```
+3. ```cargo build```
 4. ```cargo run```
 
 **Create executable**
